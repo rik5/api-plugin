@@ -1,8 +1,8 @@
 {
-    "name": "rupadana/filament-api-service",
+    "name": "rik5/filament-api-service",
     "description": "A simple api service for supporting filamentphp",
     "keywords": [
-        "rupadana",
+        "rik5",
         "laravel",
         "api-service",
         "api",
@@ -17,8 +17,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Rupadana",
-            "email": "rupadanawayan@gmail.com",
+            "name": "rik5",
+            "email": "rik5@qysen.com",
             "role": "Developer"
         }
     ],
