@@ -1,5 +1,5 @@
 {
-    "name": "rik5/filament-api-service",
+    "name": "rik5/api-plugin",
     "description": "A simple api service for supporting filamentphp",
     "keywords": [
         "rik5",
@@ -9,10 +9,10 @@
         "filament",
         "filament api"
     ],
-    "homepage": "https://github.com/rupadana/api-service",
+    "homepage": "https://github.com/rik5/api-plugin",
     "support": {
-        "issues": "https://github.com/rupadana/api-service/issues",
-        "source": "https://github.com/rupadana/api-service"
+        "issues": "https://github.com/rik5/api-plugin/issues",
+        "source": "https://github.com/rik5/api-plugin"
     },
     "license": "MIT",
     "authors": [
