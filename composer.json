@@ -1,0 +1,88 @@
+{
+    "name": "rik5/api-plugin",
+    "description": "A simple api service for supporting filamentphp - Fork with Laravel 13 support",
+    "keywords": [
+        "rik5",
+        "laravel",
+        "api-service",
+        "api",
+        "filament",
+        "filament api"
+    ],
+    "homepage": "https://github.com/rik5/api-plugin",
+    "support": {
+        "issues": "https://github.com/rik5/api-plugin/issues",
+        "source": "https://github.com/rik5/api-plugin"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rupadana",
+            "email": "rupadanawayan@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Rik5",
+            "role": "Fork Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "dedoc/scramble": "^0.13",
+        "filament/filament": "^5.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "laravel/framework": "^11.0|^12.0|^13.0",
+        "laravel/sanctum": "^3.2|^4.0",
+        "spatie/laravel-package-tools": "^1.19",
+        "spatie/laravel-permission": "^6.0|^7.0",
+        "spatie/laravel-query-builder": "^5.3|^6.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.9|^8.0",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.7",
+        "pestphp/pest-plugin-arch": "^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.0|^3.1",
+        "phpunit/phpunit": "^10.0.17|^10.5|^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rik5\\ApiPlugin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rik5\\ApiPlugin\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "post-install-cmd": [
+            "yarn install",
+            "npx husky init"
+        ],
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rik5\\ApiPlugin\\ApiPluginServiceProvider",
+                "Rik5\\ApiPlugin\\AuthServiceProvider"
+            ],
+            "aliases": {
+                "ApiPlugin": "Rik5\\ApiPlugin\\Facades\\ApiPlugin"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
